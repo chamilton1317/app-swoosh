@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -51,6 +52,9 @@
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" red="0.98298110658982307" green="0.99631135895480616" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="ze8-Ua-Lzi" kind="show" id="Dbu-cL-jho"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swooshLogo" translatesAutoresizingMaskIntoConstraints="NO" id="JPb-ML-TyT">
                                 <rect key="frame" x="128" y="40" width="119" height="20"/>
@@ -172,6 +176,17 @@
                                     <color key="titleColor" red="0.98298110660000004" green="0.99631135900000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8a-1v-7nz">
+                                <rect key="frame" x="20" y="30" width="29" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="29" id="A59-Mj-g54"/>
+                                    <constraint firstAttribute="height" constant="24" id="tyP-0r-zwK"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="ruC-oV-t9v" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="y8N-BT-pkO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -181,6 +196,8 @@
                             <constraint firstItem="7cJ-kb-3da" firstAttribute="top" secondItem="9UR-bn-QUs" secondAttribute="top" constant="20" id="Emg-c2-ygq"/>
                             <constraint firstItem="9UR-bn-QUs" firstAttribute="trailing" secondItem="7cJ-kb-3da" secondAttribute="trailing" id="Hkj-Me-fK1"/>
                             <constraint firstItem="9UR-bn-QUs" firstAttribute="trailing" secondItem="zff-MC-tU8" secondAttribute="trailing" constant="10" id="R02-mo-5Dc"/>
+                            <constraint firstItem="f8a-1v-7nz" firstAttribute="top" secondItem="aD4-is-uPV" secondAttribute="topMargin" constant="10" id="UF1-RH-Mov"/>
+                            <constraint firstItem="f8a-1v-7nz" firstAttribute="leading" secondItem="9UR-bn-QUs" secondAttribute="leading" constant="20" id="XnE-eZ-vX7"/>
                             <constraint firstItem="7cJ-kb-3da" firstAttribute="leading" secondItem="9UR-bn-QUs" secondAttribute="leading" id="aWL-8R-262"/>
                             <constraint firstItem="51y-PI-OCi" firstAttribute="leading" secondItem="9UR-bn-QUs" secondAttribute="leading" id="cAA-8c-Vl4"/>
                             <constraint firstItem="zff-MC-tU8" firstAttribute="leading" secondItem="9UR-bn-QUs" secondAttribute="leading" constant="10" id="cW3-mw-BHS"/>
@@ -193,6 +210,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ALp-mV-bYQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ruC-oV-t9v" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="946.39999999999998" y="133.5832083958021"/>
         </scene>
@@ -291,6 +309,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="29" height="24"/>
         <image name="beginnerBallerBG" width="414" height="736"/>
         <image name="desiredLeagueBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>
