@@ -139,6 +139,9 @@
                                         <state key="normal" title="MENS">
                                             <color key="titleColor" red="0.98298110660000004" green="0.99631135900000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onMensTapped:" destination="ze8-Ua-Lzi" eventType="touchUpInside" id="VNz-gi-1ay"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Umf-xc-k58" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="76" width="375" height="56"/>
@@ -150,6 +153,9 @@
                                         <state key="normal" title="WOMENS">
                                             <color key="titleColor" red="0.98298110660000004" green="0.99631135900000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onWomensTapped:" destination="ze8-Ua-Lzi" eventType="touchUpInside" id="HPg-Fl-vvr"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGH-zH-Z4L" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="152" width="375" height="56"/>
@@ -161,10 +167,13 @@
                                         <state key="normal" title="COED">
                                             <color key="titleColor" red="0.98298110660000004" green="0.99631135900000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onCoedTapped:" destination="ze8-Ua-Lzi" eventType="touchUpInside" id="DkY-Y1-SSF"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zff-MC-tU8" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zff-MC-tU8" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                 <rect key="frame" x="10" y="591" width="355" height="56"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.34787029110000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -212,6 +221,7 @@
                         <viewLayoutGuide key="safeArea" id="9UR-bn-QUs"/>
                     </view>
                     <connections>
+                        <outlet property="nextBtn" destination="zff-MC-tU8" id="nFp-7d-cgf"/>
                         <segue destination="ahP-Jh-FJ1" kind="show" identifier="skillVCSegue" id="KLW-ve-rbH"/>
                     </connections>
                 </viewController>
